@@ -4,7 +4,9 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
-const app=express()
+const app = express()
+
+const port = process.env.PORT || 3000
 
 console.log(path.join(__dirname,'../../web-servers/public'))
 
@@ -87,6 +89,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000,()=>{
-    console.log("PORT running at 3000")
+app.listen(port ,()=>{
+    console.log("PORT running at "+port)
 })
