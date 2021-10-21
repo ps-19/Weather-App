@@ -10,12 +10,14 @@
     </head>
 
     <body>
-        {{>header}}
-
-        <h1>This is {{title}} page</h1>
-        <img class="portrait" src="/img/robot.png"> {{! accesses public folder}}
-        <p>{{desc}}</p>
         
+        <div class="main-content">
+            {{>header}}
+            <h1>This is {{title}} page</h1>
+            <img class="portrait" src="/img/robot.png"> {{! accesses public folder}}
+            <p>{{desc}}</p>
+        </div>
+
         {{>footer}}
     </body>
 
